@@ -74,10 +74,14 @@ var resCircle = function(numCircle) {
                // loading: true,
                type: 'html',
                delay: 1500,
-               content: negResponseText + '<br /><img src="' + targetURL + '" width="500">'
+               content: negResponseText + '<br /><img src="' + targetURL + '" width="500">',
+		cssClass: 'botui-no-icon'
            }).then(function() {
                var numCircle2 = numCircle - 1
-               // console.log(numCircle)
+                console.log(numCircle)
+		   console.log('Image URL:', targetURL);
+console.log('HTML Content:', negResponseText + '<br /><img src="' + targetURL + '" width="500">');
+
                return resCircle(numCircle2)
            }) 
        }
