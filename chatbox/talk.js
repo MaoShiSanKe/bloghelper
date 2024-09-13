@@ -207,7 +207,7 @@ var other = function() {
    }).then(function(res) {
        return botui.message.bot({
            delay: 1500,
-           content: '再次感谢！<br /><img src= "https://chevereto.hwb0307.com/images/2022/10/16/wallhaven-85x3v2.md.jpg" width="500">'
+           content: '再次感谢！<br /><img src= "https://bensz.onmicrosoft.cn/images/dlddw.gif" width="500">'
        })
    });
 }
