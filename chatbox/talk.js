@@ -38,8 +38,8 @@ var resCircle = function(numCircle) {
 
    // 随机图链接
    var randPic = [
-       "https://www.loliapi.com/acg/",
-	   "https://img.paulzzh.com/touhou/random"
+       "https://img.loliapi.cn/i/pc/img443.webp",
+	   "https://img.paulzzh.com/touhou/konachan/image/2fde7de9a9df5e8615615a5facdb9c7e.jpg"
    ]; 
    var indexrandPic = Math.floor((Math.random()*randPic.length)); 
    var targetURL= randPic[indexrandPic];
