@@ -1,0 +1,37 @@
+<div id="custom-chatbox">
+    <div class="botui-title" style="text-align:center; font-size: 50px; margin-bottom: 20px;">[凌晨三点]</div>
+    <div id="botui-content" class="popcontainer"
+        style="min-height: 300px; padding: 2px 6px 4px; background-color: rgba(242, 242, 242, 0.5); border-radius: 10px;">
+        <center>
+            <p></p>
+            <h4>
+                与 <ruby>
+                    Mssk <rp>（</rp>
+                    <rt>卯 三</rt>
+                    <rp>）</rp>
+                </ruby>
+                对话中...
+            </h4>
+            <p></p>
+        </center>
+        <bot-ui>
+            <link href="https://cdn.jsdelivr.net/gh/MaoShiSanKe/bloghelper@main/chatbox/botui-theme-mssk.css" rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/gh/MaoShiSanKe/bloghelper@main/chatbox/botui.min.css" rel="stylesheet">
+            <div id="kelecnbot" class="popcontainer" style="min-height: 300px; padding: 2px 6px 4px; background-color: transparent; border-radius: 10px;">
+                <bot-ui></bot-ui>
+            </div>
+        </bot-ui>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/botui@0.3.8/build/botui.min.js"></script>
+    <script src="https://mssk.site/wp-content/uploads/chatbox/talk.js"></script>
+    <script>
+        window.pjaxLoaded = function(){
+            bot_ui_ini()
+        }
+        $(window.pjaxLoaded);
+        $(document).on('pjax:start', window.pjaxLoaded);
+    </script>
+</div>
+<iframe src="https://mssk.site/donate/drinks/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe>
+<p style="color:grey;font-size:1.25rem;" align="center"><i>如果页面未出现任何对话，请按F5刷新网页喔！<br>图片源于API</i></p>
