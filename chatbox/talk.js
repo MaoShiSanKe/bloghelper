@@ -17,7 +17,7 @@ botui.message.bot({
        content: "是一个常年把VPS干崩的...咳咳！"
    })
 }).then(function(){
-   // 限制递归的数量：
+   // 限制递归的数量，用于限制用户调用链接次数，建议开小点，走本地链接将消耗流量
    return resCircle(8)
 });
 
@@ -38,8 +38,8 @@ var resCircle = function(numCircle) {
 
    // 随机图链接
    var randPic = [
-       "https://mssk.site/wp-content/uploads/2024/08/cropped-1.png",
 	   "https://mssk.site/wp-content/uploads/2024/09/Niconiconi.webp",
+	   "这里填入你的图片链接，一行一个，用英文  ,  逗号隔开"
    ]; 
    var indexrandPic = Math.floor((Math.random()*randPic.length)); 
    var targetURL= randPic[indexrandPic];
@@ -74,14 +74,10 @@ var resCircle = function(numCircle) {
                // loading: true,
                type: 'html',
                delay: 1500,
-               content: negResponseText + '<br /><img src="' + targetURL + '" width="500">',
-		cssClass: 'botui-no-icon'
+               content: negResponseText + '<br /><img src="' + targetURL + '" width="500">'
            }).then(function() {
                var numCircle2 = numCircle - 1
-                console.log(numCircle)
-		   console.log('Image URL:', targetURL);
-console.log('HTML Content:', negResponseText + '<br /><img src="' + targetURL + '" width="500">');
-
+               // console.log(numCircle)
                return resCircle(numCircle2)
            }) 
        }
@@ -206,12 +202,12 @@ var other = function() {
    }).then(function(res) {
        return botui.message.bot({
            delay: 1500,
-           content: "点击下方的小猫咪可以捐赠~"
+           content: "点击下方Miku可以捐赠~"
        })
    }).then(function(res) {
        return botui.message.bot({
            delay: 1500,
-           content: '再次感谢！<br /><img src= "https://bensz.onmicrosoft.cn/images/dlddw.gif" width="500">'
+           content: '再次感谢！<br /><img src= "https://mssk.site/wp-content/uploads/2024/09/dlddw.gif" width="500">'
        })
    });
 }
